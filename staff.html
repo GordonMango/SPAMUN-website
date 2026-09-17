@@ -108,13 +108,23 @@
         }
       }
 
-      /* Disable sticky navbar */
+      /* Keep the navbar in normal document flow instead of pinned to the
+         viewport. It stays `relative` (not `static`) so it remains the
+         positioning context for the mobile dropdown menu. */
       #navbar-container {
         position: static !important;
       }
 
-      #navbar-container * {
-        position: static !important;
+      #navbar-container .navbar {
+        position: relative !important;
+        inset: auto !important;
+      }
+
+      /* The mobile menu Webflow injects must stay absolutely positioned,
+         or it renders in flow and shoves the page down. */
+      #navbar-container .w-nav-overlay,
+      #navbar-container [data-nav-menu-open] {
+        position: absolute !important;
       }
     </style>
   </head>
@@ -196,6 +206,10 @@
             </div>
             <div class="footer-contact-wrap">
               <div class="footer-contact-info-wrap">
+                <div class="footer-contact-info-name">Conference Date</div>
+                <h3 class="footer-contact-info-details">Saturday, October 17, 2026</h3>
+              </div>
+              <div class="footer-contact-info-wrap">
                 <div class="footer-contact-info-name">Email Us</div>
                 <h3 class="footer-contact-info-details">spamundelegateinquiries@southpointe.ca</h3>
               </div>
@@ -225,7 +239,6 @@
     </div>
 
     <script src="js/jquery.js" type="text/javascript"></script>
-    <script src="js/webflow.js" type="text/javascript"></script>
     <script src="js/webflow.schunk.dc8c5f8672644daa.js" type="text/javascript"></script>
     <script src="js/webflow.schunk.2be5f1d74a0cfced.js" type="text/javascript"></script>
     <script src="js/webflow.schunk.f28319d2fee81553.js" type="text/javascript"></script>

@@ -71,13 +71,88 @@
       };
     </script>
     <style>
-      /* Disable sticky navbar */
+      /* Keep the navbar in normal document flow instead of pinned to the
+         viewport. It stays `relative` (not `static`) so it remains the
+         positioning context for the mobile dropdown menu. */
       #navbar-container {
         position: static !important;
       }
 
-      #navbar-container * {
-        position: static !important;
+      #navbar-container .navbar {
+        position: relative !important;
+        inset: auto !important;
+      }
+
+      /* The mobile menu Webflow injects must stay absolutely positioned,
+         or it renders in flow and shoves the page down. */
+      #navbar-container .w-nav-overlay,
+      #navbar-container [data-nav-menu-open] {
+        position: absolute !important;
+      }
+
+      /* Conference date badge in the hero */
+      .banner-date-wrap {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 12px;
+        margin-top: 18px;
+      }
+
+      .banner-date-badge {
+        display: inline-block;
+        padding: 8px 18px;
+        border-radius: 50px;
+        background: #000033;
+        color: #ffffff;
+        font-family: 'Inter Tight', sans-serif;
+        font-weight: 700;
+        font-size: 16px;
+        letter-spacing: 0.4px;
+      }
+
+      .banner-date-location {
+        font-family: 'Rethink Sans', sans-serif;
+        font-size: 15px;
+        color: #555;
+      }
+
+      /* At <=991px the hero image becomes a full-bleed background and the
+         hero text turns white, so the date line has to follow suit. */
+      @media (max-width: 991px) {
+        .banner-date-wrap {
+          gap: 10px;
+          margin-top: 16px;
+        }
+
+        .banner-date-badge {
+          background: #ffffff;
+          color: #000033;
+          font-size: 15px;
+          padding: 7px 16px;
+        }
+
+        .banner-date-location {
+          color: #ffffff;
+          font-size: 14px;
+        }
+      }
+
+      @media (max-width: 479px) {
+        .banner-date-wrap {
+          flex-direction: column;
+          align-items: flex-start;
+          gap: 6px;
+        }
+
+        .banner-date-badge {
+          font-size: 13px;
+          padding: 6px 13px;
+        }
+
+        .banner-date-location {
+          font-size: 12px;
+        }
       }
     </style>
   </head>
@@ -107,6 +182,10 @@
                         Get ready for Spamun
                         2026
                       </h1>
+                      <div class="banner-date-wrap">
+                        <span class="banner-date-badge">Saturday, October 17, 2026</span>
+                        <span class="banner-date-location">Southpointe Academy &middot; Delta, BC</span>
+                      </div>
                     </div>
                     <div
                       data-w-id="cde1358f-fc39-2098-c471-25ed5c8a8a0f"
@@ -114,22 +193,6 @@
                       class="banner-info-wrap"
                     >
                       <div class="banner-info-flex-wrap">
-                        <div
-                          data-w-id="c78a47b6-ecb6-3006-10e9-1d87df84ad5a"
-                          class="banner-info-star-wrap"
-                        >
-                          <img
-                            src="images/banner-info-star.svg"
-                            loading="lazy"
-                            alt=""
-                            class="banner-info-star"
-                          /><img
-                            src="images/banner-info-hover-star.svg"
-                            loading="lazy"
-                            alt=""
-                            class="banner-info-hover-star"
-                          />
-                        </div>
                         <div class="banner-info-details-button">
                           <div class="banner-info-details-wrap">
                             <p class="banner-info-details for-responsive">
@@ -147,7 +210,7 @@
                     <img src="img/spa.jpg" loading="lazy" alt="" class="banner-video" style="width: 100%; height: 100%; object-fit: cover;">
                     </div>
                   </div>
-                <div data-w-id="be8bd6ae-30d0-8d4d-796d-551014c9d3fd" class="banner-circle _1" style="will-change: transform; transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) [...]
+                <div data-w-id="be8bd6ae-30d0-8d4d-796d-551014c9d3fd" class="banner-circle _1"></div>
                 <div
                   data-w-id="8a0ed9b3-cd67-14b5-db66-5d41354e910e"
                   class="banner-circle _2"
@@ -242,7 +305,7 @@
                   <div class="solutions-video-card-contant">
                     <div class="solutions-video-details-wrap">
                       <p class="solutions-video-details">
-                        SPAMUN is an accessible conference for both new and experienced delegates. With a diverse range of committees, delegates can choose to engage in debates that match their i[...]
+                        SPAMUN is an accessible conference for both new and experienced delegates. With a diverse range of committees, delegates can choose to engage in debates that match their interests and experience level.
                       </p>
                     </div>
                     <div class="solutions-video-image-wrap">
@@ -343,6 +406,10 @@
               <div class="section-divider top footer"></div>
             </div>
             <div class="footer-contact-wrap">
+              <div class="footer-contact-info-wrap">
+                <div class="footer-contact-info-name">Conference Date</div>
+                <h3 class="footer-contact-info-details">Saturday, October 17, 2026</h3>
+              </div>
               <div class="footer-contact-info-wrap">
                 <div class="footer-contact-info-name">Email Us</div>
                 <h3 class="footer-contact-info-details">
