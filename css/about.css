@@ -1,268 +1,72 @@
-/* ===== Instagram Glass Card ===== */
-.ig-glass-wrap {
-  margin-top: 28px;
-  display: flex;
-  justify-content: center;
-}
-
-.ig-glass-card {
-  width: min(740px, 100%);
-  padding: 22px 18px 18px 18px;
-  border-radius: 24px;
-
-  /* glass look */
-  background: rgba(255, 255, 255, 0.10);
-  border: 1px solid rgba(255, 255, 255, 0.18);
-  backdrop-filter: blur(14px);
-  -webkit-backdrop-filter: blur(14px);
-
-  /* depth */
-  box-shadow: 0 18px 50px rgba(0, 0, 0, 0.18);
-}
-
-.ig-glass-inner {
-  display: flex;
-  justify-content: center;
-}
-
-/* Keep IG embed responsive */
-.ig-glass-card iframe {
-  max-width: 100% !important;
-}
-
-/* ===== Follow Button ===== */
-.ig-follow-row {
-  margin-top: 14px;
-  display: flex;
-  justify-content: center;
-}
-
-.ig-follow-btn {
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-
-  padding: 12px 16px;
-  border-radius: 999px;
-
-  text-decoration: none;
-  font-weight: 700;
-  letter-spacing: 0.2px;
-
-  color: #fff;
-  background: linear-gradient(90deg, #833ab4, #fd1d1d, #fcb045);
-  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.22);
-
-  transition: transform 200ms ease, box-shadow 200ms ease, filter 200ms ease;
-}
-
-.ig-follow-btn:hover {
-  transform: translateY(-2px);
-  filter: brightness(1.03);
-  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.26);
-}
-
-.ig-follow-dot {
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  background: rgba(255, 255, 255, 0.9);
-}
-
-/* ===== Fade-in Animation ===== */
-.fade-in-up {
-  opacity: 0;
-  transform: translateY(14px);
-  transition: opacity 600ms ease, transform 600ms ease;
-}
-
-.fade-in-up.is-visible {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-/* Reduce motion accessibility */
-@media (prefers-reduced-motion: reduce) {
-  .fade-in-up {
-    opacity: 1;
-    transform: none;
-    transition: none;
-  }
-}
-
-/* ================= ABOUT PAGE SPACING CONTROL ================= */
-
-/* Tighten inner banner bottom spacing */
+/* About page photo banner */
 #about-inner-banner {
-  padding-bottom: 24px !important; /* was likely large */
-}
-
-/* Remove extra space from inner banner wrappers */
-#about-inner-banner .inner-banner-wrapper,
-#about-inner-banner .inner-banner-contant-wrap {
-  margin-bottom: 0 !important;
-  padding-bottom: 0 !important;
-}
-
-/* Kill Instagram default margins */
-#about-inner-banner .instagram-media {
-  margin-bottom: 0 !important;
-}
-
-/* Tighten space between banner and next section */
-#about-inner-banner + .section {
-  padding-top: 100px !important;  /* reduce from default */
-}
-
-/* Safety: remove any flex centering that stretches height */
-#about-inner-banner .inner-banner-wrapper {
-  align-items: flex-start !important;
-}
-
-/* ===== Neon title for About page ===== */
-#about-inner-banner .inner-banner-title {
-  color: #08fdfd; /* base neon cyan */
-  text-shadow:
-    0 0 6px rgba(8,253,253,0.8),
-    0 0 12px rgba(8,253,253,0.6),
-    0 0 24px rgba(8,253,253,0.35),
-    0 0 40px rgba(8,253,253,0.18);
-  transition: text-shadow 280ms ease, transform 280ms ease, color 280ms ease;
-  display: inline-block;
-  will-change: transform, text-shadow;
-  animation: neonPulse 2.6s ease-in-out infinite;
-}
-
-@keyframes neonPulse {
-  0% {
-    text-shadow: 0 0 6px rgba(8,253,253,0.6), 0 0 12px rgba(8,253,253,0.45), 0 0 24px rgba(8,253,253,0.25), 0 0 36px rgba(8,253,253,0.12);
-    transform: translateZ(0) scale(1);
-    color: #06eaea;
-  }
-  50% {
-    text-shadow: 0 0 10px rgba(8,253,253,1), 0 0 20px rgba(8,253,253,0.85), 0 0 36px rgba(8,253,253,0.55), 0 0 60px rgba(8,253,253,0.28);
-    transform: translateZ(0) scale(1.02);
-    color: #00f7f7;
-  }
-  100% {
-    text-shadow: 0 0 6px rgba(8,253,253,0.6), 0 0 12px rgba(8,253,253,0.45), 0 0 24px rgba(8,253,253,0.25), 0 0 36px rgba(8,253,253,0.12);
-    transform: translateZ(0) scale(1);
-    color: #06eaea;
-  }
-}
-
-/* Slight hover boost for desktops */
-#about-inner-banner .inner-banner-title:hover {
-  transform: scale(1.03);
-  text-shadow: 0 0 14px rgba(8,253,253,1), 0 0 28px rgba(8,253,253,0.85), 0 0 48px rgba(8,253,253,0.5);
-}
-
-@media (prefers-reduced-motion: reduce) {
-  #about-inner-banner .inner-banner-title {
-    animation: none !important;
-    transition: none !important;
-    text-shadow: none !important;
-  }
-}
-
-/* Neon-word: removed rainbow effect */
-#about-inner-banner .inner-banner-title .neon-word {
-  display: inline-block;
-  font-weight: 800;
-}
-
-/* ===== Typewriter rotator ===== */
-.typed-rotator {
-  display: inline-block;
   position: relative;
-  color: #fff;
-  margin-left: .5rem;
-  font-weight: 600;
-}
-
-.typed-rotator::after {
-  content: '';
-  display: inline-block;
-  width: 1px;
-  height: 1.1em;
-  background: currentColor;
-  margin-left: .24rem;
-  vertical-align: middle;
-  animation: typedCursor 900ms steps(1) infinite;
-}
-
-@keyframes typedCursor {
-  0% { opacity: 1; }
-  50% { opacity: 0; }
-  100% { opacity: 1; }
-}
-
-/* small style for typed text to blend with neon title */
-#about-inner-banner .typed-rotator { color: #cfeff0; text-shadow: none; }
-
-@media (prefers-reduced-motion: reduce) {
-  .typed-rotator::after { animation: none !important; opacity: 1; }
-}
-
-/* Centered block under the title */
-.typed-rotator-wrap {
-  margin-top: 8px;
-  display: flex;
-  justify-content: center;
-}
-
-.typed-rotator {
-  margin-left: 0; /* reset inline spacing */
-  font-size: 1.05rem;
-  color: rgba(255,255,255,0.92);
-}
-
-@media (max-width: 768px) {
-  .typed-rotator { font-size: 0.95rem; }
-}
-
-/* About page hero banner */
-#about-inner-banner.banner-with-image {
-  position: relative;
-  min-height: 70vh;
+  isolation: isolate;
   display: flex;
   align-items: center;
-  background-image: url("../img/newbuilding.jpg"); /* change to your desired banner image */
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+  min-height: clamp(20rem, 52vh, 36rem);
+  min-height: clamp(20rem, 52svh, 36rem);
+  padding: clamp(3rem, 7vw, 6rem) 0;
+  background: #000033 url("../img/newbuilding.jpg") center / cover no-repeat;
 }
 
-/* Dark overlay */
-#about-inner-banner.banner-with-image::before {
+#about-inner-banner::before {
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, 0.45);
+  z-index: -1;
+  background: rgba(0, 0, 30, 0.58);
 }
 
-/* Ensure content is above overlay */
-#about-inner-banner.banner-with-image .container,
-#about-inner-banner.banner-with-image .inner-banner-wrapper,
-#about-inner-banner.banner-with-image .inner-banner-contant-wrap {
-  position: relative;
-  z-index: 1;
+#about-inner-banner .container {
+  width: 100%;
 }
 
-/* White text on banner */
-#about-inner-banner.banner-with-image .section-mini-title,
-#about-inner-banner.banner-with-image .inner-banner-title {
-  color: #ffffff;
+#about-inner-banner .inner-banner-title-wrap {
+  max-width: 52rem;
 }
 
-#about-inner-banner.banner-with-image .section-title-dot {
-  background: #ffffff;
+#about-inner-banner .section-mini-title,
+#about-inner-banner .inner-banner-title {
+  color: #fff;
 }
 
+#about-inner-banner .section-title-dot {
+  background: #fff;
+}
 
+#about-inner-banner .inner-banner-title {
+  margin: 0;
+  font-size: clamp(2.5rem, 7vw, 5rem);
+  font-weight: 600;
+  line-height: 1.1;
+  text-transform: none;
+  text-wrap: balance;
+}
 
-/* ===== About page TEXTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTspacing improvements ===== */
+#about-inner-banner .about-banner-description {
+  margin: 1.25rem auto 0;
+  padding: 0;
+  max-width: 34rem;
+  color: #fff;
+  font-size: clamp(1rem, 2.5vw, 1.25rem);
+  font-weight: 400;
+  line-height: 1.5;
+  text-wrap: balance;
+  opacity: 1;
+  transform: none;
+  animation: none;
+}
 
+#about-inner-banner .about-banner-description::before {
+  content: none;
+}
+
+#about-inner-banner + .section {
+  padding-top: clamp(3rem, 6vw, 6.25rem);
+}
+
+/* About page content spacing */
 #about-inner-banner + .section h2 {
   margin-top: 56px;
   margin-bottom: 16px;
