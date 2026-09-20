@@ -28,58 +28,13 @@
   <link href="../img/logo.png" rel="icon" type="image/png"/>
   <script
     type="text/javascript">window.__WEBFLOW_CURRENCY_SETTINGS = { "currencyCode": "USD", "symbol": "$", "decimal": ".", "fractionDigits": 2, "group": ",", "template": "{{wf {\"path\":\"symbol\",\"type\":\"PlainText\"} }} {{wf {\"path\":\"amount\",\"type\":\"CommercePrice\"} }} {{wf {\"path\":\"currencyCode\",\"type\":\"PlainText\"} }}", "hideDecimalForWholeNumbers": false };</script>
+  <link href="../css/responsive.css" rel="stylesheet" type="text/css" />
 </head>
 
 <body>
   <div class="pages-wrapper">
-    <div data-animation="default" data-collapse="medium" data-duration="400" data-easing="ease" data-easing2="ease"
-      role="banner" class="navbar home-v1 w-nav">
-      <div class="container">
-        <div class="navbar-wrap">
-          <div class="split-contant navbar-left">
-            <a href="/" class="navbar-logo-wrap w-nav-brand">
-              <img loading="lazy" src="../img/logo.png" alt="" class="navbar-logo" style="max-width: 50px; height: auto;" />
-            </a>
-          </div>
-          <div class="split-contant navbar-middle">
-            <nav role="navigation" class="nav-menu-wrap w-nav-menu">
-              <div class="nav-menu-links-wrap">
-                <a href="../index.html" class="nav-menu-link w-inline-block">
-                  <div>Home</div>
-                </a>
-                <a href="../staff.html" class="nav-menu-link w-inline-block">
-                  <div>Staff</div>
-                </a>
-                <a href="../secretariat.html" class="nav-menu-link w-inline-block">
-                  <div>Secretariat</div>
-                </a>
-                <a href="../contact-us.html" class="nav-menu-link w-inline-block">
-                  <div>Contact Us</div>
-                </a>
-                <a href="../conferences.html" class="nav-menu-link w-inline-block">
-                  <div>Conference</div>
-                </a>
-                <a href="../committees.html" class="nav-menu-link w-inline-block">
-                  <div>Committees</div>
-                </a>
-                <a href="../registration.html" class="nav-menu-link w-inline-block">
-                  <div>Registration</div>
-                </a>
-                
-              </div>
-            </nav>
-          </div>
-          <div class="split-contant navbar-right">
-            <div class="hamburger-menu-wrapper w-nav-button">
-              <div class="hamburger-menu-lines">
-                <div class="hamburger-menu-bar top"></div>
-                <div class="hamburger-menu-bar bottom"></div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+    <div id="navbar-container"></div>
+    <script src="../js/load-navbar.js"></script>
     <section class="section inner-banner">
       <div class="container">
         <div class="inner-banner-wrapper">
@@ -132,10 +87,7 @@
                   <h3 style="margin-bottom: 1rem;">Get Ready For DISEC</h3>
                   <p style="margin-bottom: 1rem;">Read the backgrounder, write position papers, and prepare for substantive debate on security and disarmament.</p>
                   <p style="margin-bottom: 1.5rem;">Please send position papers to <a href="mailto:spamundelegateinquiries@southpointe.ca">spamundelegateinquiries@southpointe.ca</a>. Include your surname, forename, and delegation in the subject.</p>
-                  <a href="../Backgrounders/DISEC BACKGROUNDER _ SPAMUN 2025.pdf" target="_blank" class="primary-button color-pale-aquamarine w-inline-block" style="background-color: #000033; color: white; border: 2px solid white;">
-                    <div class="primary-button-text">View the Committee Backgrounder</div>
-                    <div class="primary-button-hover-text">View the Committee Backgrounder</div>
-                  </a>
+                  <p class="backgrounder-status">The committee backgrounder will be posted here when available.</p>
                 </div>
               </div>
             </div>
@@ -295,23 +247,23 @@
         }
       }
     </style>
-    <section class="section staff-section" style="padding: 4rem 0;">
+    <section id="dais" class="section staff-section" style="padding: 4rem 0;">
       <div class="container">
         <div class="section-title-wrap text-align-center">
-          <h2 class="section-title">Meet the Dias</h2>
+          <h2 class="section-title">Meet the Dais</h2>
         </div>
         <div class="w-layout-grid staff-grid">
-          <div class="staff-card w-inline-block">
-            <img class="staff-image" src="../staff-headshots-2026/Renie Zhu- Chair - DISEC.jpg" alt="Renie Zhu">
-            <div class="staff-name">Renie Zhu</div>
-            <div class="staff-role">Chair</div>
-            <div class="staff-description">As a surviving senior at Steveston-London Secondary School, Renie is beyond excited to serve as the Chair of the Disarmament and International Security Committee at SPAMUN 2026. Since stumbling into her very first Model UN conference just over a year ago slightly confused but determined to survive her speeches, Renie has collected fair share of memorable GA moments, from scrambling to finish resolution clauses minutes before presenting, to debating wording that somehow becomes far more intense than expected, to celebrating when everything finally comes together, MUN has given her both memorable experiences and ever-lasting friendships. Outside of committee, Renie can be found napping, grinding at waves coffee house, playing sports, and spending time with her friends, somehow managing to be both productive and not at the same time. She looks forward to a weekend of live debate, strong collaboration, and memorable experiences!</div>
-          </div>
           <div class="staff-card w-inline-block">
             <img class="staff-image" src="../staff-headshots-2026/Marie Harmsworth - Director - DISEC.jpg" alt="Marie Harmsworth">
             <div class="staff-name">Marie Harmsworth</div>
             <div class="staff-role">Director</div>
             <div class="staff-description">A suffering senior at Lord Byng Secondary School in Vancouver, Marie is elated to be serving as the director of the Disarmament and International Security Committee at SPAMUN 2026. Ever since being forced into her first committee session a long long time ago as an overly shy delegate, Marie has developed a passion for the vibrant debate, violent table banging, and chaotic crisis sessions found within the committee room. Over the years, she has become deeply SHOCKED AND APPALLED at the innumerable hours she has spent passing notes, obsessing over every MUN sticker, and cramming position papers. From scheming invasions for some random HCC delegates, to negotiating in French at 2am to partaking in an Inside Out mafia, Marie has cultivated a collection of fond memories from her time in MUN which she will cherish for years to come. Now as a certified MUN veteran, Marie sincerely hopes that every DISEC delegate at SPAMUN has an amazing committee room experience. Outside of the committee room, Marie can be found trying out new coffee shops, partaking in the randomest activities because why not, or fleeing Vancouver to explore new cities. Additionally, she also spends an unspeakable amount of time throwing frisbees in hopes of the “perfect throw."</div>
+          </div>
+          <div class="staff-card w-inline-block">
+            <img class="staff-image" src="../staff-headshots-2026/Renie Zhu- Chair - DISEC.jpg" alt="Renie Zhu">
+            <div class="staff-name">Renie Zhu</div>
+            <div class="staff-role">Chair</div>
+            <div class="staff-description">As a surviving senior at Steveston-London Secondary School, Renie is beyond excited to serve as the Chair of the Disarmament and International Security Committee at SPAMUN 2026. Since stumbling into her very first Model UN conference just over a year ago slightly confused but determined to survive her speeches, Renie has collected fair share of memorable GA moments, from scrambling to finish resolution clauses minutes before presenting, to debating wording that somehow becomes far more intense than expected, to celebrating when everything finally comes together, MUN has given her both memorable experiences and ever-lasting friendships. Outside of committee, Renie can be found napping, grinding at waves coffee house, playing sports, and spending time with her friends, somehow managing to be both productive and not at the same time. She looks forward to a weekend of live debate, strong collaboration, and memorable experiences!</div>
           </div>
           <div class="staff-card w-inline-block">
             <img class="staff-image" src="../staff-headshots-2026/Abigail  - Assistant Director - DISEC.jpg" alt="Abigail Rozmus">

@@ -28,58 +28,13 @@
   <link href="../img/favicon.png" rel="icon" type="image/png"/>
   <script
     type="text/javascript">window.__WEBFLOW_CURRENCY_SETTINGS = { "currencyCode": "USD", "symbol": "$", "decimal": ".", "fractionDigits": 2, "group": ",", "template": "{{wf {\"path\":\"symbol\",\"type\":\"PlainText\"} }} {{wf {\"path\":\"amount\",\"type\":\"CommercePrice\"} }} {{wf {\"path\":\"currencyCode\",\"type\":\"PlainText\"} }}", "hideDecimalForWholeNumbers": false };</script>
+  <link href="../css/responsive.css" rel="stylesheet" type="text/css" />
 </head>
 
 <body>
   <div class="pages-wrapper">
-    <div data-animation="default" data-collapse="medium" data-duration="400" data-easing="ease" data-easing2="ease"
-      role="banner" class="navbar home-v1 w-nav">
-      <div class="container">
-        <div class="navbar-wrap">
-          <div class="split-contant navbar-left">
-            <a href="/" class="navbar-logo-wrap w-nav-brand">
-              <img loading="lazy" src="../img/logo.png" alt="" class="navbar-logo" style="max-width: 50px; height: auto;" />
-            </a>
-          </div>
-          <div class="split-contant navbar-middle">
-            <nav role="navigation" class="nav-menu-wrap w-nav-menu">
-              <div class="nav-menu-links-wrap">
-                <a href="../index.html" class="nav-menu-link w-inline-block">
-                  <div>Home</div>
-                </a>
-                <a href="../staff.html" class="nav-menu-link w-inline-block">
-                  <div>Staff</div>
-                </a>
-                <a href="../secretariat.html" class="nav-menu-link w-inline-block">
-                  <div>Secretariat</div>
-                </a>
-                <a href="../contact-us.html" class="nav-menu-link w-inline-block">
-                  <div>Contact Us</div>
-                </a>
-                <a href="../conferences.html" class="nav-menu-link w-inline-block">
-                  <div>Conference</div>
-                </a>
-                <a href="../committees.html" class="nav-menu-link w-inline-block">
-                  <div>Committees</div>
-                </a>
-                <a href="../registration.html" class="nav-menu-link w-inline-block">
-                  <div>Registration</div>
-                </a>
-                
-              </div>
-            </nav>
-          </div>
-          <div class="split-contant navbar-right">
-            <div class="hamburger-menu-wrapper w-nav-button">
-              <div class="hamburger-menu-lines">
-                <div class="hamburger-menu-bar top"></div>
-                <div class="hamburger-menu-bar bottom"></div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+    <div id="navbar-container"></div>
+    <script src="../js/load-navbar.js"></script>
     <section class="section inner-banner">
       <div class="container">
         <div class="inner-banner-wrapper">
@@ -291,23 +246,23 @@
         }
       }
     </style>
-    <section class="section staff-section" style="padding: 4rem 0;">
+    <section id="dais" class="section staff-section" style="padding: 4rem 0;">
       <div class="container">
         <div class="section-title-wrap text-align-center">
-          <h2 class="section-title">Meet the Dias</h2>
+          <h2 class="section-title">Meet the Dais</h2>
         </div>
         <div class="w-layout-grid staff-grid">
-          <div class="staff-card w-inline-block">
-            <img src="../staff-headshots-2026/Minh Dang Trang - Chair - UNSC - Headshot.jpg" alt="Minh Dang Trang" style="width: 200px; height: 200px; object-fit: cover; border-radius: 50%;">
-            <div class="staff-name">Minh Dang Tran</div>
-            <div class="staff-role">Chair</div>
-            <div class="staff-description">Minh is a current IB diploma 11th grader at Abbotsford Senior Secondary, and is honoured to serve as Chair for UNSC in this year's iteration of SPAMUN. Initially, Minh joined the Abbotsford Senior MUN club two years ago to improve his public speaking skills, but, from the decriminalization of cannabis in UNODC to uniting the world as Katseye in crisis, he discovered a passion for the unique world of MUN. Outside of MUN, Minh is often spotted losing in rank very often in Identity V, to his dismay, and constantly thinking about all of the work he will not do tomorrow. Minh's ambition is to foster a memorable experience for all delegates and hopes to make SPAMUN as enjoyable as possible.</div>
-          </div>
           <div class="staff-card w-inline-block">
             <img src="../staff-headshots-2026/Alveera Wahi - Director - UNSC - Headshot.jpg" alt="Alveera Wahi" style="width: 200px; height: 200px; object-fit: cover; border-radius: 50%;">
             <div class="staff-name">Alveera Wahi</div>
             <div class="staff-role">Director</div>
             <div class="staff-description">As a senior at Semiahmoo Secondary, Alveera’s MUN journey began in grade 9 when a friend convinced her to try it out, and she never looked back. What started as a simple curiosity, quickly turned into a passion for debate, diplomacy, and the thrill of committee sessions. Now as the Director for UNSC at SPAMUN 2026 she’s excited to see delegates bring their best ideas forward and create discussions that leave an impact (and maybe witness some legendary diplomatic roasts along the way). Outside of MUN, Alveera can be found trying to keep up with the speed of Formula 1 at ungodly hours or taking extremely long walks. Always up for a good laugh and eager to connect with fellow delegates and staff, Alveera is looking forward to an exciting and memorable SPAMUN 2026!</div>
+          </div>
+          <div class="staff-card w-inline-block">
+            <img src="../staff-headshots-2026/Minh Dang Trang - Chair - UNSC - Headshot.jpg" alt="Minh Dang Trang" style="width: 200px; height: 200px; object-fit: cover; border-radius: 50%;">
+            <div class="staff-name">Minh Dang Trang</div>
+            <div class="staff-role">Chair</div>
+            <div class="staff-description">Minh is a current IB diploma 11th grader at Abbotsford Senior Secondary, and is honoured to serve as Chair for UNSC in this year's iteration of SPAMUN. Initially, Minh joined the Abbotsford Senior MUN club two years ago to improve his public speaking skills, but, from the decriminalization of cannabis in UNODC to uniting the world as Katseye in crisis, he discovered a passion for the unique world of MUN. Outside of MUN, Minh is often spotted losing in rank very often in Identity V, to his dismay, and constantly thinking about all of the work he will not do tomorrow. Minh's ambition is to foster a memorable experience for all delegates and hopes to make SPAMUN as enjoyable as possible.</div>
           </div>
           <div class="staff-card w-inline-block">
             <img src="../staff-headshots-2026/Aimee Tong - AD - UNSC - Headshot.png" alt="Aimee Tong" style="width: 200px; height: 200px; object-fit: cover; border-radius: 50%;">

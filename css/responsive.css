@@ -1,0 +1,361 @@
+/* Shared layout fixes for the exported pages. */
+.container,
+.staff-grid > *,
+.blogs-single-right-wrap,
+.contact-info-details-wrap,
+.footer-contact-info-wrap,
+.footer-social-link-copyright {
+  min-width: 0;
+}
+
+.inner-banner-title,
+.staff-name,
+.staff-description,
+.footer-contact-info-details,
+.contact-info,
+.blogs-details,
+.single-blogs-details,
+.faq-question,
+.faq-answer {
+  overflow-wrap: anywhere;
+}
+
+.primary-button,
+.plan-button,
+iframe {
+  max-width: 100%;
+}
+
+.primary-button-text,
+.primary-button-hover-text {
+  text-align: center;
+}
+
+/* Staff biographies must grow naturally at narrow widths and larger text sizes. */
+.staff-grid.staff-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  align-items: start;
+}
+
+.staff-card.staff-card {
+  min-width: 0;
+}
+
+.staff-section .staff-card,
+.staff-directory .staff-card {
+  cursor: default;
+}
+
+.staff-card img,
+.staff-card .staff-image-placeholder {
+  width: min(200px, 100%) !important;
+  height: auto !important;
+  aspect-ratio: 1;
+  object-fit: cover;
+  border-radius: 50%;
+  display: block;
+  margin: 0 auto 20px;
+}
+
+.staff-section .staff-description,
+.staff-grid .staff-card.expanded .staff-description {
+  max-height: none;
+  overflow: visible;
+}
+
+.staff-card[onclick] {
+  padding-bottom: 50px;
+}
+
+.roster-members {
+  margin: 0 0 1.5rem;
+  padding: 0;
+  list-style: none;
+}
+
+.roster-members li {
+  padding: 0.75rem 0;
+  border-bottom: 1px solid #ddd;
+}
+
+.roster-members strong,
+.roster-members span {
+  display: block;
+  overflow-wrap: anywhere;
+}
+
+.roster-members span {
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.roster-link {
+  display: inline-block;
+  padding: 0.5rem 0;
+  text-underline-offset: 3px;
+}
+
+/* Navigation is initialized by load-navbar.js, independently of Webflow timing. */
+.site-navbar.site-navbar {
+  position: relative;
+  inset: auto;
+  z-index: 1000;
+}
+
+.site-navbar .navbar-middle {
+  min-width: 0;
+}
+
+.site-navbar .navbar-right,
+.site-navbar .site-menu-toggle {
+  display: none;
+}
+
+.site-navbar .nav-menu-links-wrap {
+  gap: clamp(0.75rem, 2vw, 2.188rem);
+}
+
+.site-menu-toggle {
+  border: 0;
+  background: transparent;
+  color: #000033;
+  padding: 0;
+}
+
+.site-menu-toggle:focus-visible,
+.nav-menu-link:focus-visible {
+  outline: 2px solid #0a4886;
+  outline-offset: 4px;
+}
+
+.nav-menu-link[aria-current="page"] {
+  text-decoration: underline;
+  text-underline-offset: 5px;
+}
+
+.navbar-fallback {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+/* Native disclosure controls grow to fit answers and work with touch or keyboard. */
+.registration-faq {
+  display: grid;
+  gap: 1rem;
+}
+
+.registration-faq .single-faq-accordion-wrap {
+  display: block;
+}
+
+.registration-faq summary {
+  cursor: pointer;
+  list-style: none;
+}
+
+.registration-faq summary::-webkit-details-marker {
+  display: none;
+}
+
+.registration-faq summary:focus-visible {
+  outline: 2px solid #0a4886;
+  outline-offset: 4px;
+}
+
+.registration-faq .faq-accordion-answer-wrap {
+  display: block;
+  max-height: none;
+  padding-top: 0.8rem;
+}
+
+.registration-faq [open] {
+  background-color: #f4f8fb;
+}
+
+.faq-toggle-icon {
+  flex: 0 0 1.5rem;
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+.faq-toggle-icon::before {
+  content: "+";
+}
+
+[open] > summary .faq-toggle-icon::before {
+  content: "−";
+}
+
+@media (min-width: 992px) {
+  /* Equal side columns keep the links centered independently of the logo. */
+  .site-navbar .navbar-wrap {
+    display: grid;
+    grid-template-columns: minmax(50px, 1fr) auto minmax(50px, 1fr);
+  }
+
+  .site-navbar .navbar-left {
+    justify-self: start;
+  }
+
+  .site-navbar .navbar-middle {
+    grid-column: 2;
+    justify-self: center;
+  }
+
+  .site-navbar .nav-menu-wrap {
+    float: none;
+  }
+
+  .site-navbar .nav-menu-links-wrap {
+    gap: clamp(0.75rem, 1.5vw, 2.188rem);
+    justify-content: center;
+  }
+}
+
+@media (max-width: 991px) {
+  .staff-grid.staff-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .site-navbar .navbar-right,
+  .site-navbar .site-menu-toggle {
+    display: flex;
+  }
+
+  .site-navbar .nav-menu-wrap {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 1rem;
+    right: 1rem;
+    width: auto;
+    max-height: var(--menu-max-height, 60vh);
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    border-radius: 1rem;
+    box-shadow: 0 8px 24px #0002;
+  }
+
+  .site-navbar.menu-open .nav-menu-wrap {
+    display: block;
+  }
+
+  .site-navbar .nav-menu-links-wrap {
+    gap: 0.25rem;
+    align-items: stretch;
+    padding: 0.75rem 1.25rem;
+  }
+
+  .site-navbar .nav-menu-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    min-height: 44px;
+  }
+
+  .site-navbar.menu-open .hamburger-menu-bar.top {
+    transform: translateY(3.5px) rotate(45deg);
+  }
+
+  .site-navbar.menu-open .hamburger-menu-bar.bottom {
+    transform: translateY(-3.5px) rotate(-45deg);
+  }
+
+  /* The navigation now occupies its own space above the page heading. */
+  .section.inner-banner {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
+
+  .section.banner .banner-contant {
+    height: auto;
+    min-height: 30rem;
+    padding: clamp(2rem, 6vw, 4rem) 1.5rem;
+    isolation: isolate;
+  }
+
+  .banner-contant .banner-flex-wrap {
+    height: auto;
+    min-height: 23rem;
+    gap: 2rem;
+  }
+
+  .banner-contant .banner-video-wrap {
+    z-index: -1;
+  }
+
+  .banner-contant .banner-video-wrap::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: #00003366;
+  }
+}
+
+@media (max-width: 767px) {
+  .staff-grid.staff-grid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 1.5rem;
+    padding: 1.5rem 0;
+  }
+
+  .staff-card.staff-card {
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+  }
+
+  .footer-contact-wrap {
+    flex-wrap: wrap;
+  }
+
+  .footer-contact-info-wrap {
+    max-width: 100%;
+  }
+
+  .contact-us-card.contact-us-card {
+    min-height: 0 !important;
+  }
+
+  .blogs-single-right-wrap {
+    width: 100%;
+  }
+
+  .single-blogs-details figure.w-richtext-align-fullwidth {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .conference-section,
+  .resources-section {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  [data-letter-unfold] {
+    padding: 1.5rem 1.25rem !important;
+  }
+
+  .pricing-plan-card .pricing-plan-card-contant {
+    padding: 1.5rem 1rem;
+  }
+
+  .country-matrix-wrap iframe {
+    min-height: 450px;
+  }
+}
+
+@media (max-width: 479px) {
+  .country-matrix-wrap iframe {
+    min-height: 350px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .vmun-style-banner::before,
+  .banner-icon {
+    animation: none;
+  }
+}

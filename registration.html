@@ -80,7 +80,7 @@
     .pricing-plan-grid {
       display: grid !important;
       gap: 2rem;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(min(280px, 100%), 1fr));
       width: 100%;
     }
     .pricing-plan-card {
@@ -398,17 +398,11 @@
       .jotform-wrap iframe {
         min-height: 600px;
       }
-      .country-matrix-wrap iframe {
-        min-height: 450px;
-      }
     }
 
     @media (max-width: 480px) {
       .jotform-wrap iframe {
         min-height: 500px;
-      }
-      .country-matrix-wrap iframe {
-        min-height: 350px;
       }
     }
 
@@ -441,16 +435,8 @@
     .country-matrix-wrap iframe {
       display: block; width: 100%; min-height: 700px; border: none; background: transparent;
       -webkit-overflow-scrolling: touch;
-      touch-action: pan-y;
-      user-select: none;
-      -webkit-user-select: none;
     }
 
-    /* Prevent zoom on iframe interaction */
-    .country-matrix-wrap {
-      touch-action: pan-y pinch-zoom;
-      -webkit-touch-callout: none;
-    }
     
     .matrix-button {
       display: inline-flex; align-items: center; gap: 0.5rem;
@@ -498,6 +484,7 @@
     .footer-circle-wrap, .footer-circle { display: none; }
     .footer-top-wrap { display: none; }
   </style>
+  <link href="css/responsive.css" rel="stylesheet" type="text/css" />
 </head>
 
 <body>
@@ -620,7 +607,6 @@
             title="Country Matrix"
             src="https://docs.google.com/spreadsheets/d/e/2PACX-1vR93KDkX0gRcpfFJYxI-dFWT1s1oLJS-ewhi8C1h0kAXNtGXsfbJSJJIlYfpdssG4_f0-PiC14t0zTJ/pubhtml"
             sandbox="allow-same-origin allow-scripts allow-popups allow-presentation"
-            style="touch-action: pan-y;"
           ></iframe>
         </div>
       </div>
@@ -641,57 +627,34 @@
               <h2 class="section-title">Frequently asked questions.</h2>
             </div>
             <div class="faq-right-wrap">
-              <div data-current="Tab 1" data-easing="ease" data-duration-in="300" data-duration-out="100"
-                class="faq-accordion-tabs w-tabs">
-                <div class="faq-accordion-wrapper w-tab-menu">
-                  <a data-w-tab="Tab 1" class="single-faq-accordion-wrap w-inline-block w-tab-link w--current">
-                    <div class="faq-accordion-contant">
-                      <div class="faq-accordion-question-wrap">
-                        <h3 class="faq-question">Who is SPAMUN for?</h3>
-                        <div class="faq-icon-wrapper">
-                          <div class="faq-icon">+</div>
-                          <div class="faq-minus-icon">-</div>
-                        </div>
-                      </div>
-                      <div class="faq-accordion-answer-wrap">
-                        <p class="faq-answer">A conference with a variety of committees, SPAMUN is suitable for any delegate! We offer general assemblies to those who are just starting out, regional councils to our more intermediate delegates, and an advanced committee to the delegates who want to challenge themselves!</p>
-                      </div>
-                    </div>
-                  </a>
-                  <a data-w-tab="Tab 2" class="single-faq-accordion-wrap w-inline-block w-tab-link">
-                    <div class="faq-accordion-contant">
-                      <div class="faq-accordion-question-wrap">
-                        <h3 class="faq-question">How is SPAMUN different?</h3>
-                        <div class="faq-icon-wrapper">
-                          <div class="faq-icon">+</div>
-                          <div class="faq-minus-icon">-</div>
-                        </div>
-                      </div>
-                      <div class="faq-accordion-answer-wrap">
-                        <p class="faq-answer">Because of its smaller size, SPAMUN is more focused on individual delegates. Our committees all have less than 30 delegates each, and as such, we are able to focus on helping you with a better debating experience!</p>
-                      </div>
-                    </div>
-                  </a>
-                  <a data-w-tab="Tab 3" class="single-faq-accordion-wrap w-inline-block w-tab-link">
-                    <div class="faq-accordion-contant">
-                      <div class="faq-accordion-question-wrap">
-                        <h3 class="faq-question">It's my first time participating in model UN. How should I prepare for this conference?</h3>
-                        <div class="faq-icon-wrapper">
-                          <div class="faq-icon">+</div>
-                          <div class="faq-minus-icon">-</div>
-                        </div>
-                      </div>
-                      <div class="faq-accordion-answer-wrap">
-                        <p class="faq-answer">First off, congrats on signing up! That's a fantastic step in getting started on your model UN journey! Model UN is a fantastic way for you to gain a global perspective, and find your voice. To get started, you can look at the information section of our website. There, you will find several guides that pertain to conference rules of procedure, details about model UN, and helpful information for research!</p>
-                      </div>
-                    </div>
-                  </a>
-                </div>
-                <div class="display-none w-tab-content">
-                  <div data-w-tab="Tab 1" class="w-tab-pane w--tab-active"></div>
-                  <div data-w-tab="Tab 2" class="w-tab-pane"></div>
-                  <div data-w-tab="Tab 3" class="w-tab-pane"></div>
-                </div>
+              <div class="registration-faq">
+                <details class="single-faq-accordion-wrap" name="registration-faq">
+                  <summary class="faq-accordion-question-wrap">
+                    <span class="faq-question">Who is SPAMUN for?</span>
+                    <span class="faq-toggle-icon" aria-hidden="true"></span>
+                  </summary>
+                  <div class="faq-accordion-answer-wrap">
+                    <p class="faq-answer">A conference with a variety of committees, SPAMUN is suitable for any delegate! We offer general assemblies to those who are just starting out, regional councils to our more intermediate delegates, and an advanced committee to the delegates who want to challenge themselves!</p>
+                  </div>
+                </details>
+                <details class="single-faq-accordion-wrap" name="registration-faq">
+                  <summary class="faq-accordion-question-wrap">
+                    <span class="faq-question">How is SPAMUN different?</span>
+                    <span class="faq-toggle-icon" aria-hidden="true"></span>
+                  </summary>
+                  <div class="faq-accordion-answer-wrap">
+                    <p class="faq-answer">Because of its smaller size, SPAMUN is more focused on individual delegates. Our committees all have less than 30 delegates each, and as such, we are able to focus on helping you with a better debating experience!</p>
+                  </div>
+                </details>
+                <details class="single-faq-accordion-wrap" name="registration-faq">
+                  <summary class="faq-accordion-question-wrap">
+                    <span class="faq-question">It's my first time participating in model UN. How should I prepare for this conference?</span>
+                    <span class="faq-toggle-icon" aria-hidden="true"></span>
+                  </summary>
+                  <div class="faq-accordion-answer-wrap">
+                    <p class="faq-answer">First off, congrats on signing up! That's a fantastic step in getting started on your model UN journey! Model UN is a fantastic way for you to gain a global perspective, and find your voice. To get started, you can look at the information section of our website. There, you will find several guides that pertain to conference rules of procedure, details about model UN, and helpful information for research!</p>
+                  </div>
+                </details>
               </div>
             </div>
           </div>
@@ -759,75 +722,12 @@
     </section>
   </div>
 
-  <script src="../js/jquery.js?site=67ce83d0b67e4995faf5329d" type="text/javascript"></script>
+  <script src="js/jquery.js?site=67ce83d0b67e4995faf5329d" type="text/javascript"></script>
   <script src="js/webflow.schunk.dc8c5f8672644daa.js" type="text/javascript"></script>
   <script src="js/webflow.schunk.2be5f1d74a0cfced.js" type="text/javascript"></script>
   <script src="js/webflow.schunk.f28319d2fee81553.js" type="text/javascript"></script>
   <script src="js/webflow-script-3.js" type="text/javascript"></script>
 
-  <!-- Smooth scroll to form -->
-  <script>
-    document.querySelector('.plan-button').addEventListener('click', function(e) {
-      e.preventDefault();
-      document.getElementById('registration-form').scrollIntoView({ behavior: 'smooth' });
-    });
-
-    // Resize JotForm iframe dynamically
-    window.addEventListener('message', function(event) {
-      if (event.data && event.data.action === 'setHeight') {
-        var iframe = document.getElementById('JotFormIFrame-251228111219042');
-        if (iframe) iframe.style.minHeight = event.data.height + 'px';
-      }
-    });
-
-    // FAQ accordion — smooth animate, all collapsed on load
-    (function () {
-      // Inject transition styles
-      var style = document.createElement('style');
-      style.textContent = [
-        '.faq-accordion-answer-wrap {',
-        '  display: block !important;',
-        '  overflow: hidden;',
-        '  max-height: 0;',
-        '  opacity: 0;',
-        '  transition: max-height 0.4s ease, opacity 0.3s ease, padding 0.3s ease;',
-        '  padding-top: 0 !important;',
-        '  padding-bottom: 0;',
-        '}',
-        '.faq-accordion-answer-wrap.is-open {',
-        '  max-height: 400px;',
-        '  opacity: 1;',
-        '  padding-top: 0.8rem !important;',
-        '  padding-bottom: 0.4rem;',
-        '}'
-      ].join('');
-      document.head.appendChild(style);
-
-      // Collapse all on load (remove w--current from the first item Webflow pre-opens)
-      document.querySelectorAll('.single-faq-accordion-wrap').forEach(function(el) {
-        el.classList.remove('w--current');
-      });
-
-      // Click handler
-      document.querySelectorAll('.single-faq-accordion-wrap').forEach(function(item) {
-        item.addEventListener('click', function(e) {
-          e.preventDefault();
-          var isOpen = this.classList.contains('w--current');
-
-          // Close all
-          document.querySelectorAll('.single-faq-accordion-wrap').forEach(function(el) {
-            el.classList.remove('w--current');
-            el.querySelector('.faq-accordion-answer-wrap').classList.remove('is-open');
-          });
-
-          // Open clicked one if it was closed
-          if (!isOpen) {
-            this.classList.add('w--current');
-            this.querySelector('.faq-accordion-answer-wrap').classList.add('is-open');
-          }
-        });
-      });
-    })();
-  </script>
+  <script src="js/registration.js"></script>
 </body>
 </html>

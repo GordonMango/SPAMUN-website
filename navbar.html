@@ -29,17 +29,17 @@
 
 <!-- Navbar -->
 <div data-animation="default" data-collapse="medium" data-duration="400" data-easing="ease" data-easing2="ease"
-  role="banner" class="navbar w-nav">
+  role="banner" class="navbar site-navbar">
   <div class="container">
     <div class="navbar-wrap">
       <div class="split-contant navbar-left">
-        <a href="/" class="navbar-logo-wrap w-nav-brand">
-          <img loading="lazy" src="img/logo.png" alt="" class="navbar-logo" style="max-width: 50px; height: auto;" />
+        <a href="index.html" class="navbar-logo-wrap w-nav-brand" aria-label="SPAMUN home">
+          <img src="img/logo.png" alt="SPAMUN" class="navbar-logo" style="max-width: 50px; height: auto;" />
         </a>
       </div>
 
       <div class="split-contant navbar-middle">
-        <nav role="navigation" class="nav-menu-wrap w-nav-menu">
+        <nav id="main-navigation" aria-label="Main navigation" class="nav-menu-wrap w-nav-menu">
           <div class="nav-menu-links-wrap">
             <a href="index.html" class="nav-menu-link w-inline-block">
               <div class="text-block-6">Home</div>
@@ -47,6 +47,10 @@
 
             <a href="secretariat.html" class="nav-menu-link w-inline-block">
               <div class="text-block-6">Secretariat</div>
+            </a>
+
+            <a href="staff.html" class="nav-menu-link w-inline-block">
+              <div class="text-block-6">Staff</div>
             </a>
 
             <a href="about_us.html" class="nav-menu-link w-inline-block">
@@ -73,12 +77,12 @@
       </div>
 
       <div class="split-contant navbar-right">
-        <div class="hamburger-menu-wrapper w-nav-button">
-          <div class="hamburger-menu-lines">
-            <div class="hamburger-menu-bar top"></div>
-            <div class="hamburger-menu-bar bottom"></div>
-          </div>
-        </div>
+        <button type="button" class="hamburger-menu-wrapper site-menu-toggle" aria-controls="main-navigation" aria-expanded="false" aria-label="Open navigation menu">
+          <span class="hamburger-menu-lines" aria-hidden="true">
+            <span class="hamburger-menu-bar top"></span>
+            <span class="hamburger-menu-bar bottom"></span>
+          </span>
+        </button>
       </div>
     </div>
   </div>

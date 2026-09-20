@@ -28,58 +28,13 @@
   <link href="../img/favicon.png" rel="icon" type="image/png"/>
   <script
     type="text/javascript">window.__WEBFLOW_CURRENCY_SETTINGS = { "currencyCode": "USD", "symbol": "$", "decimal": ".", "fractionDigits": 2, "group": ",", "template": "{{wf {\"path\":\"symbol\",\"type\":\"PlainText\"} }} {{wf {\"path\":\"amount\",\"type\":\"CommercePrice\"} }} {{wf {\"path\":\"currencyCode\",\"type\":\"PlainText\"} }}", "hideDecimalForWholeNumbers": false };</script>
+  <link href="../css/responsive.css" rel="stylesheet" type="text/css" />
 </head>
 
 <body>
   <div class="pages-wrapper">
-    <div data-animation="default" data-collapse="medium" data-duration="400" data-easing="ease" data-easing2="ease"
-      role="banner" class="navbar home-v1 w-nav">
-      <div class="container">
-        <div class="navbar-wrap">
-          <div class="split-contant navbar-left">
-            <a href="/" class="navbar-logo-wrap w-nav-brand">
-              <img loading="lazy" src="../img/logo.png" alt="" class="navbar-logo" style="max-width: 50px; height: auto;" />
-            </a>
-          </div>
-          <div class="split-contant navbar-middle">
-            <nav role="navigation" class="nav-menu-wrap w-nav-menu">
-              <div class="nav-menu-links-wrap">
-                <a href="../index.html" class="nav-menu-link w-inline-block">
-                  <div>Home</div>
-                </a>
-                <a href="../staff.html" class="nav-menu-link w-inline-block">
-                  <div>Staff</div>
-                </a>
-                <a href="../secretariat.html" class="nav-menu-link w-inline-block">
-                  <div>Secretariat</div>
-                </a>
-                <a href="../contact-us.html" class="nav-menu-link w-inline-block">
-                  <div>Contact Us</div>
-                </a>
-                <a href="../conferences.html" class="nav-menu-link w-inline-block">
-                  <div>Conference</div>
-                </a>
-                <a href="../committees.html" class="nav-menu-link w-inline-block">
-                  <div>Committees</div>
-                </a>
-                <a href="../registration.html" class="nav-menu-link w-inline-block">
-                  <div>Registration</div>
-                </a>
-                
-              </div>
-            </nav>
-          </div>
-          <div class="split-contant navbar-right">
-            <div class="hamburger-menu-wrapper w-nav-button">
-              <div class="hamburger-menu-lines">
-                <div class="hamburger-menu-bar top"></div>
-                <div class="hamburger-menu-bar bottom"></div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+    <div id="navbar-container"></div>
+    <script src="../js/load-navbar.js"></script>
     <section class="section inner-banner">
       <div class="container">
         <div class="inner-banner-wrapper">
@@ -292,23 +247,23 @@
         }
       }
     </style>
-    <section class="section staff-section" style="padding: 4rem 0;">
+    <section id="dais" class="section staff-section" style="padding: 4rem 0;">
       <div class="container">
         <div class="section-title-wrap text-align-center">
-          <h2 class="section-title">Meet the Dias</h2>
+          <h2 class="section-title">Meet the Dais</h2>
         </div>
         <div class="w-layout-grid staff-grid">
           <div class="staff-card w-inline-block">
             <img src="../staff-headshots-2026/isabella staff photo.png" alt="Isabella Wu" style="width: 200px; height: 200px; object-fit: cover; border-radius: 50%;">
             <div class="staff-name">Isabella Wu</div>
-            <div class="staff-role">Chair</div>
-            <div class="staff-description">Currently a 10th grader at Crofton House, Isabella is elated to be serving as the Chair of House of Commons at SPAMUN 2026. Since the beginning of her Model UN journey, she has quickly grown to love the fast-paced, unpredictable nature of debate, and the way every session opens up new perspectives and connections. Whether it's late-night resolution writing or making conversation during unmoderated caucuses, MUN has become one of Isabella’s favourite spaces to learn, laugh, and lead. Outside of MUN, you can find Isabella trying to find yet another keychain for her bag, tuning her guitar for the third time, or mastering the art of procrastination via Instagram. She’s excited to welcome all the delegates in HoC and can’t wait for a weekend filled with thoughtful debate and great memories.</div>
+            <div class="staff-role">Director</div>
+            <div class="staff-description">Currently a 10th grader at Crofton House, Isabella is elated to be serving as the Director of House of Commons at SPAMUN 2026. Since the beginning of her Model UN journey, she has quickly grown to love the fast-paced, unpredictable nature of debate, and the way every session opens up new perspectives and connections. Whether it's late-night resolution writing or making conversation during unmoderated caucuses, MUN has become one of Isabella’s favourite spaces to learn, laugh, and lead. Outside of MUN, you can find Isabella trying to find yet another keychain for her bag, tuning her guitar for the third time, or mastering the art of procrastination via Instagram. She’s excited to welcome all the delegates in HoC and can’t wait for a weekend filled with thoughtful debate and great memories.</div>
           </div>
           <div class="staff-card w-inline-block">
-            <img src="../staff-headshots-2026/kaylie chan png.png" alt="Kaylie Chan" style="width: 200px; height: 200px; object-fit: cover; border-radius: 50%;">
-            <div class="staff-name">Kaylie Chan</div>
-            <div class="staff-role">Director</div>
-            <div class="staff-description">Currently a grade 12 student at Steveston-London Secondary School, Kaylie is thrilled to serve as the Director of HOC for SPAMUN 2026. Since embarking on her Model UN journey in eighth grade as a nervous first-time delegate barely able to finish a sentence, she has developed a deep love for the spirited and dynamic debates that make MUN so special. Some of her favourite memories include getting lost in hotel stairwells while rushing to committee sessions and navigating midnight crises in a half-asleep haze. Outside the committee room, Kaylie enjoys rewatching her favourite TV shows and browsing Uber Eats for cravings—only to decide against ordering due to the delivery fee! She is eagerly looking forward to meeting all the delegates and hopes for a day filled with engaging debate and unforgettable moments!</div>
+            <img src="../staff-headshots-2026/Charlie.jpg" alt="Charlie Sung" style="width: 200px; height: 200px; object-fit: cover; border-radius: 50%;">
+            <div class="staff-name">Charlie Sung</div>
+            <div class="staff-role">Chair</div>
+            <div class="staff-description">As an upcoming senior at Southpointe Academy, Charlie is ecstatic to be Chair of HOC. In his third year of doing MUN Charlie is excited to step into the new world of staffing. From running to the nearest Big Way to being late to almost all of his committee sessions. Outside of MUN Charlie can be found grinding on his startup, playing brawl stars with his friends during lunch, and skipping air cadets. Charlie has always enjoyed the unforgettable memories that MUN has brought him, including making some of his best friends, and most importantly heated crisis committees. While you're in Delta for SPAMUN Charlie recommends that you check the Tsawwassen Mills nearby.</div>
           </div>
           <div class="staff-card w-inline-block">
             <img src="../staff-headshots-2026/Preston chen photo.png" alt="Preston Chen" style="width: 200px; height: 200px; object-fit: cover; border-radius: 50%;">

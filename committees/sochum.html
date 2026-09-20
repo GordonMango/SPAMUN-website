@@ -28,55 +28,13 @@
   <link href="../img/favicon.png" rel="icon" type="image/png"/>
   <script
     type="text/javascript">window.__WEBFLOW_CURRENCY_SETTINGS = { "currencyCode": "USD", "symbol": "$", "decimal": ".", "fractionDigits": 2, "group": ",", "template": "{{wf {\"path\":\"symbol\",\"type\":\"PlainText\"} }} {{wf {\"path\":\"amount\",\"type\":\"CommercePrice\"} }} {{wf {\"path\":\"currencyCode\",\"type\":\"PlainText\"} }}", "hideDecimalForWholeNumbers": false };</script>
+  <link href="../css/responsive.css" rel="stylesheet" type="text/css" />
 </head>
 
 <body>
   <div class="pages-wrapper">
-    <div data-animation="default" data-collapse="medium" data-duration="400" data-easing="ease" data-easing2="ease"
-      role="banner" class="navbar home-v1 w-nav">
-      <div class="container">
-        <div class="navbar-wrap">
-          <div class="split-contant navbar-left">
-            <a href="/" class="navbar-logo-wrap w-nav-brand">
-              <img loading="lazy" src="../img/logo.png" alt="" class="navbar-logo" style="max-width: 50px; height: auto;" />
-            </a>
-          </div>
-          <div class="split-contant navbar-middle">
-            <nav role="navigation" class="nav-menu-wrap w-nav-menu">
-              <div class="nav-menu-links-wrap">
-                <a href="../index.html" class="nav-menu-link w-inline-block">
-                  <div>Home</div>
-                </a>
-                <a href="../staff.html" class="nav-menu-link w-inline-block">
-                  <div>Staff</div>
-                </a>
-                <a href="../contact-us.html" class="nav-menu-link w-inline-block">
-                  <div>Contact</div>
-                </a>
-                <a href="../conferences.html" class="nav-menu-link w-inline-block">
-                  <div>Conference</div>
-                </a>
-                <a href="../committees.html" class="nav-menu-link w-inline-block">
-                  <div>Committees</div>
-                </a>
-                <a href="../registration.html" class="nav-menu-link w-inline-block">
-                  <div>Registration</div>
-                </a>
-                
-              </div>
-            </nav>
-          </div>
-          <div class="split-contant navbar-right">
-            <div class="hamburger-menu-wrapper w-nav-button">
-              <div class="hamburger-menu-lines">
-                <div class="hamburger-menu-bar top"></div>
-                <div class="hamburger-menu-bar bottom"></div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+    <div id="navbar-container"></div>
+    <script src="../js/load-navbar.js"></script>
     <section class="section inner-banner">
       <div class="container">
         <div class="inner-banner-wrapper">
@@ -122,10 +80,7 @@
                   <h3 style="margin-bottom: 1rem;">Get Ready For SOCHUM</h3>
                   <p style="margin-bottom: 1rem;">Read the backgrounder, write position papers, and prepare for constructive, rights-focused debate!</p>
                   <p style="margin-bottom: 1.5rem;">Please send position papers to <a href="mailto:spamundelegateinquiries@southpointe.ca">spamundelegateinquiries@southpointe.ca</a>. Include your surname, forename, and delegation in the subject.</p>
-                  <a href="../Backgrounders/SOCHUM Backgrounder Template.pdf" target="_blank" class="primary-button color-pale-aquamarine w-inline-block" style="background-color: #000033; color: white; border: 2px solid white;">
-                    <div class="primary-button-text">View the Committee Backgrounder</div>
-                    <div class="primary-button-hover-text">View the Committee Backgrounder</div>
-                  </a>
+                  <p class="backgrounder-status">The committee backgrounder will be posted here when available.</p>
                 </div>
               </div>
             </div>
@@ -281,29 +236,29 @@
         }
       }
     </style>
-    <section class="section staff-section" style="padding: 4rem 0;">
+    <section id="dais" class="section staff-section" style="padding: 4rem 0;">
       <div class="container">
         <div class="section-title-wrap text-align-center">
-          <h2 class="section-title">Meet the Dias</h2>
+          <h2 class="section-title">Meet the Dais</h2>
         </div>
         <div class="w-layout-grid staff-grid">
           <div class="staff-card w-inline-block">
-            <img src="../staff-headshots-2026/Thomas Chen - Chair - Sochum - Headshot.png" alt="Thomas Chen" style="width: 200px; height: 200px; object-fit: cover; border-radius: 50%;">
-            <div class="staff-name">Thomas Chen</div>
-            <div class="staff-role">Chair</div>
-            <div class="staff-description">Entering Grade 11 at St. George’s School, Thomas is excited to serve as the Chair of SOCHUM at SPAMUN 2026. Since attending his first conference in Grade 9, he has been captivated by the uniquely calm yet intense atmosphere that Model UN creates. What began as an intimidating experience quickly developed into a passion that not only cured his boredom, but also revived his once-dormant fascination with politics. Whether it’s spending hours researching the most trivial details or crafting lackluster speeches, Thomas is grateful for the memories this one-of-a-kind, non-spectator sport has given him. Outside of the committee room, Thomas can be found being moved to tears by Chopin and Rachmaninoff, performatively reading the Wall Street Journal, or spending time with his dog. He looks forward to meeting all the delegates and hopes they have an enriching experience at SPAMUN.</div>
-          </div>
-          <div class="staff-card w-inline-block">
             <img src="../staff-headshots-2026/Erin Sweeny - Director - Sochum - Headshot_.jpg" alt="Erin Sweeny" style="width: 200px; height: 200px; object-fit: cover; border-radius: 50%;">
-            <div class="staff-name">Erin Sweeney</div>
+            <div class="staff-name">Erin Sweeny</div>
             <div class="staff-role">Director</div>
             <div class="staff-description">A Grade 11 student at McMath Secondary School, Erin is ecstatic to serve as the director of SOCHUM! Her MUN journey began when she picked countries based solely on their Eurovision songs, a strategy she will defend to this day. Since then, her passion has turned into crafting speeches (with handwriting even she can’t read) full of references that maybe 3 delegates will recognize. Outside of committee rooms, Erin can be found perpetually failing to lock in on academics, exploring random rabbit holes, and eating her way through Metro Vancouver alongside her friends. At SPAMUN, she looks forward to a conference of fruitful debate, meaningful discourse, and hopefully a few delegates who actually get her references.</div>
           </div>
           <div class="staff-card w-inline-block">
-            <img src="../staff-headshots-2026/Cayden Wang - AD - Sochum-  Headshot.jpg" alt="Cayden Wang" style="width: 200px; height: 200px; object-fit: cover; border-radius: 50%;">
-            <div class="staff-name">Cayden Wang</div>
+            <img src="../PNGS/Kaveer_Lally_UNSC_AD.jpg" alt="Kaveer Lally" style="width: 200px; height: 200px; object-fit: cover; border-radius: 50%;">
+            <div class="staff-name">Kaveer Lally</div>
+            <div class="staff-role">Chair</div>
+            <div class="staff-description">As a grade 11 student at Southpointe Academy, Kaveer is excited to serve as the Chair for the Social, Humanitarian and Cultural Committee (SOCHUM) at SPAMUN 2026. He was initially introduced to MUN by a family member 3 years ago and has since developed a strong passion for MUN which has led to his return time after time. Kaveer is looking forward to a committee filled with fruitful debate, creative solutions, and intense discussions. Outside of the committee room, Kaveer can be found playing basketball, spending time with family, and travelling or seeing new things. Kaveer wishes you all the best with your preparations and is looking forward to meeting you all at SPAMUN 2026!</div>
+          </div>
+          <div class="staff-card w-inline-block">
+            <div class="staff-image-placeholder"></div>
+            <div class="staff-name">Julia Cao</div>
             <div class="staff-role">Assistant Director</div>
-            <div class="staff-description">Entering Grade 11 at Southpointe Academy, Cayden is excited to serve as the Assistant Director of SOCHUM. Since getting involved in Model UN, he has been drawn to the fast-paced environment, strategic thinking, and the challenge of turning complex global issues into compelling debates. What began as a new experience quickly took his interest in international affairs and politics to a whole new level, along with an appreciation for the unpredictable situations each committee session has to offer—from being overly prepared for a topic to creating last-minute improvised speeches. Outside of the committee room, Cayden spends much of his time indulging in music as the number one Malcomm Todd fan or eating out at new restaurants. At SPAMUN, he looks forward to supporting all delegates in every way and ensuring they have a once in a lifetime experience that won't be anything less than splendid.</div>
+            <div class="staff-description">Julia is a passionate and driven student with interests spanning debate, track and field, STEM research, and leadership. As both a competitive athlete and an experienced public speaker, she brings strong communication skills, energy, and confidence into every environment she’s part of. Outside of academics, Julia enjoys taking naps, listening to music, and creating tiktok videos where she posts about her life. She also loves food (with a passion) and shopping! She’s excited to be part of SPAMUN and hopes to help create an engaging, welcoming, and memorable conference for all delegates.</div>
           </div>
         </div>
       </div>

@@ -29,58 +29,13 @@
   <link href="../img/favicon.png" rel="icon" type="image/png"/>
   <script
     type="text/javascript">window.__WEBFLOW_CURRENCY_SETTINGS = { "currencyCode": "USD", "symbol": "$", "decimal": ".", "fractionDigits": 2, "group": ",", "template": "{{wf {\"path\":\"symbol\",\"type\":\"PlainText\"} }} {{wf {\"path\":\"amount\",\"type\":\"CommercePrice\"} }} {{wf {\"path\":\"currencyCode\",\"type\":\"PlainText\"} }}", "hideDecimalForWholeNumbers": false };</script>
+  <link href="../css/responsive.css" rel="stylesheet" type="text/css" />
 </head>
 
 <body>
   <div class="pages-wrapper">
-    <div data-animation="default" data-collapse="medium" data-duration="400" data-easing="ease" data-easing2="ease"
-      role="banner" class="navbar home-v1 w-nav">
-      <div class="container">
-        <div class="navbar-wrap">
-          <div class="split-contant navbar-left">
-            <a href="/" class="navbar-logo-wrap w-nav-brand">
-              <img loading="lazy" src="../img/logo.png" alt="" class="navbar-logo" style="max-width: 50px; height: auto;" />
-            </a>
-          </div>
-          <div class="split-contant navbar-middle">
-            <nav role="navigation" class="nav-menu-wrap w-nav-menu">
-              <div class="nav-menu-links-wrap">
-                <a href="../index.html" class="nav-menu-link w-inline-block">
-                  <div>Home</div>
-                </a>
-                <a href="../staff.html" class="nav-menu-link w-inline-block">
-                  <div>Staff</div>
-                </a>
-                <a href="../secretariat.html" class="nav-menu-link w-inline-block">
-                  <div>Secretariat</div>
-                </a>
-                <a href="../contact-us.html" class="nav-menu-link w-inline-block">
-                  <div>Contact Us</div>
-                </a>
-                <a href="../conferences.html" class="nav-menu-link w-inline-block">
-                  <div>Conference</div>
-                </a>
-                <a href="../committees.html" class="nav-menu-link w-inline-block">
-                  <div>Committees</div>
-                </a>
-                <a href="../registration.html" class="nav-menu-link w-inline-block">
-                  <div>Registration</div>
-                </a>
-                
-              </div>
-            </nav>
-          </div>
-          <div class="split-contant navbar-right">
-            <div class="hamburger-menu-wrapper w-nav-button">
-              <div class="hamburger-menu-lines">
-                <div class="hamburger-menu-bar top"></div>
-                <div class="hamburger-menu-bar bottom"></div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+    <div id="navbar-container"></div>
+    <script src="../js/load-navbar.js"></script>
     <section class="section inner-banner">
       <div class="container">
         <div class="inner-banner-wrapper">
@@ -250,10 +205,10 @@
         transform: scale(1.05);
       }
     </style>
-    <section class="section staff-section" style="padding: 4rem 0;">
+    <section id="dais" class="section staff-section" style="padding: 4rem 0;">
       <div class="container">
         <div class="section-title-wrap text-align-center">
-          <h2 class="section-title">Meet the Dias</h2>
+          <h2 class="section-title">Meet the Dais</h2>
         </div>
         <div class="w-layout-grid staff-grid">
           <div class="staff-card w-inline-block">
@@ -269,45 +224,40 @@
             <div class="staff-description">Crisis Staff for FJCC.</div>
           </div>
           <div class="staff-card w-inline-block">
-            <img src="../staff-headshots-2026/Jonathan Zhou Photo.jpg" alt="Jonathan Zhou" style="width: 200px; height: 200px; object-fit: cover; border-radius: 50%;">
-            <div class="staff-name">Jonathan Zhou</div>
-            <div class="staff-role">FJCC A Chair</div>
-            <div class="staff-description">Graduating from Steveston-London Secondary School this year, Jonathan is delighted to serve as the Chair for FJCC-A at SPAMUN 2026. Jonathan had his first MUN experience at SPAMUN 2 years ago, and since then, has been captivated by the atmosphere of these conferences. The main priority of these conferences is to have fun, and meet new people, and Jonathan always makes sure to do that. Jonathan can usually be seen eating at many different dessert spots, binging a bunch of movies, or having continuous dopamine boosts from social media. Jonathan is excited to see what all the delegates bring to the table at SPAMUN 2026, and hopes everyone will have a memorable experience.</div>
-          </div>
-          <div class="staff-card w-inline-block">
             <img src="../staff-headshots-2026/Juri Headshot.png" alt="Juri Matsuda" style="width: 200px; height: 200px; object-fit: cover; border-radius: 50%;">
             <div class="staff-name">Juri Matsuda</div>
             <div class="staff-role">FJCC A Director</div>
             <div class="staff-description">In her senior year at Little Flower Academy, Juri is honoured to serve as the Director for FJCC-A at SPAMUN 2026. She first discovered Model UN two years ago, and since then, she’s gone from a rookie delegate to a MUN club leader, staying up until 5 a.m. cramming research, and collecting enough funny conference memories to last a lifetime. When Juri isn’t buried in resolutions, you can find her listening to Bixby, eating fried chicken, or singing in the shower (a Grammy-worthy performance, in her opinion). She also drags herself out of bed at 5:30 a.m. four days a week for choir and has a not-so-secret talent for tripping down the stairs. At SPAMUN 2026, Juri is most excited to see delegates grow throughout the day, transforming from nervous first-timers into confident speakers proudly stepping out of their last committee session (ideally without tripping).</div>
           </div>
           <div class="staff-card w-inline-block">
-            <img src="../staff-headshots-2026/Charlie.jpg" alt="Charlie Sung" style="width: 200px; height: 200px; object-fit: cover; border-radius: 50%;">
-            <div class="staff-name">Charlie Sung</div>
+            <img src="../staff-headshots-2026/Jonathan Zhou Photo.jpg" alt="Jonathan Zhou" style="width: 200px; height: 200px; object-fit: cover; border-radius: 50%;">
+            <div class="staff-name">Jonathan Zhou</div>
+            <div class="staff-role">FJCC A Chair</div>
+            <div class="staff-description">Graduating from Steveston-London Secondary School this year, Jonathan is delighted to serve as the Chair for FJCC-A at SPAMUN 2026. Jonathan had his first MUN experience at SPAMUN 2 years ago, and since then, has been captivated by the atmosphere of these conferences. The main priority of these conferences is to have fun, and meet new people, and Jonathan always makes sure to do that. Jonathan can usually be seen eating at many different dessert spots, binging a bunch of movies, or having continuous dopamine boosts from social media. Jonathan is excited to see what all the delegates bring to the table at SPAMUN 2026, and hopes everyone will have a memorable experience.</div>
+          </div>
+          <div class="staff-card w-inline-block">
+            <img class="staff-image" src="../staff-headshots-2026/jayden-sun.jpg" alt="Jayden Sun" loading="lazy">
+            <div class="staff-name">Jayden Sun</div>
             <div class="staff-role">FJCC A Assistant Director</div>
-            <div class="staff-description">As an upcoming senior at Southpointe Academy, Charlie is ecstatic to be Assistant Director of FJCC. In his third year of doing MUN Charlie is excited to step into the new world of staffing. From running to the nearest Big Way to being late to almost all of his committee sessions. Outside of MUN Charlie can be found grinding on his startup, playing brawl stars with his friends during lunch, and skipping air cadets. Charlie has always enjoyed the unforgettable memories that MUN has brought him, including making some of his best friends, and most importantly heated crisis committees. While you're in Delta for SPAMUN Charlie recommends that you check the Tsawwassen Mills nearby.</div>
+            <div class="staff-description">As a rising sophomore at Southpointe Academy, Jayden is excited to be joining SPAMUN 2026 and continuing his journey in Model United Nations after starting almost 2 years ago. What started as a nervous first conference complete with shaky speeches, forgotten points, and an unhealthy dependence on pre-written notes has somehow turned into an obsession with drafting resolutions, debating policy, and surviving on questionable amounts of caffeine throughout conference weekends. While he still insists that every opening speech is "completely original," his friends would probably disagree. He also possesses a crippling addiction to “larping” every possible important event that has recurred in history, Jayden can usually be found at the Din TaiFung of LA or the Canton fair complex in Guangzhou, if hes not there hes probably at home.</div>
           </div>
           <div class="staff-card w-inline-block">
-            <img src="../PNGS/Kaveer_Lally_UNSC_AD.jpg" alt="Kaveer Lally" style="width: 200px; height: 200px; object-fit: cover; border-radius: 50%;">
-            <div class="staff-name">Kaveer Lally</div>
-            <div class="staff-role">FJCC B Chair</div>
-            <div class="staff-description">As a grade 11 student at Southpointe Academy, Kaveer is excited to serve as the Chair for the Fictional Joint Crisis Committee B (FJCC-B) at SPAMUN 2026. He was initially introduced to MUN by a family member 3 years ago and has since developed a strong passion for MUN which has led to his return time after time. Kaveer is looking forward to a committee filled with fruitful debate, creative solutions, and intense discussions. Outside of the committee room, Kaveer can be found playing basketball, spending time with family, and travelling or seeing new things. Kaveer wishes you all the best with your preparations and is looking forward to meeting you all at SPAMUN 2026!</div>
-          </div>
-          <div class="staff-card w-inline-block">
-            <img src="../staff-headshots-2026/Jasper_Zhong_Photo (1) (1).jpeg" alt="Japser Zhong" style="width: 200px; height: 200px; object-fit: cover; border-radius: 50%;">
-            <div class="staff-name">Japser Zhong</div>
+            <img src="../staff-headshots-2026/Jasper_Zhong_Photo (1) (1).jpeg" alt="Jasper Zhong" style="width: 200px; height: 200px; object-fit: cover; border-radius: 50%;">
+            <div class="staff-name">Jasper Zhong</div>
             <div class="staff-role">FJCC B Director</div>
             <div class="staff-description">Confined within the halls of Steveston-London Secondary School for one last year, Jasper is absolutely ecstatic to serve as the Director of the JCC-B committee at SPAMUN 2026. Ever since his first committee session at a SPAMUN iteration 2 years ago, Jasper has been mesmerized by the spirited atmosphere of committees as delegates evolve to come up with ever more creative ways to start their speeches. Every word spoken has compounded into unforgettable memories, irrefutable growth, and fuel for his never-ending passion for diplomacy. When decisively procrastinating on something important, Jasper can be spotted near various food spots, doomscrolling across various platforms, or playing badminton. For the upcoming iteration of SPAMUN, Jasper eagerly awaits a weekend filled with passionate debate and wishes all delegates the best of luck!</div>
           </div>
           <div class="staff-card w-inline-block">
-            <div class="staff-image-placeholder"></div>
-            <div class="staff-name">Julia Cao</div>
-            <div class="staff-role">FJCC B Assistant Director</div>
-            <div class="staff-description">Julia is a passionate and driven student with interests spanning debate, track and field, STEM research, and leadership. As both a competitive athlete and an experienced public speaker, she brings strong communication skills, energy, and confidence into every environment she’s part of. Outside of academics, Julia enjoys taking naps, listening to music, and creating tiktok videos where she posts about her life. She also loves food (with a passion) and shopping! She’s excited to be part of SPAMUN and hopes to help create an engaging, welcoming, and memorable conference for all delegates.</div>
+            <img class="staff-image" src="../staff-headshots-2026/sophia.jpg" alt="Sophia" loading="lazy">
+            <div class="staff-name">Sophia</div>
+            <div class="staff-role">FJCC B Chair</div>
+            <div class="staff-description">As a Grade 10 student currently attending York House School, Sophia is honoured to serve as Chair of FJCC at SPAMUN 2026. Although her first conference was far from perfect—involving (many) tiresome sprints to the hotel after lunch, and even more awkward speeches—Model UN has helped Sophia foster a deep passion for the fast paced debates, committee shenanigans, and late-night mukbang sessions that define every conference. Beyond the committee walls, Sophia can be found practicing poor posture habits in front of her monitor, “preparing” for her next debate tournament, or chomping down on salmon sashimi at Asa Sushi Kerrisdale. Sophia ensures that SPAMUN 2026 will be a soul-stirring experience for each and every delegate alike, and looks forward to a weekend of diplomacy and discussion!</div>
           </div>
           <div class="staff-card w-inline-block">
-            <img src="../PNGS/Jayden Chan UNSC Director.jpg" alt="Jayden Chan" style="width: 200px; height: 200px; object-fit: cover; border-radius: 50%;">
-            <div class="staff-name">Jayden Chan</div>
-            <div class="staff-role">FJCC Assistant Director</div>
+            <img src="../staff-headshots-2026/Cayden Wang - AD - Sochum-  Headshot.jpg" alt="Cayden Wang" style="width: 200px; height: 200px; object-fit: cover; border-radius: 50%;">
+            <div class="staff-name">Cayden Wang</div>
+            <div class="staff-role">FJCC B Assistant Director</div>
+            <div class="staff-description">Entering Grade 11 at Southpointe Academy, Cayden is excited to serve as the Assistant Director of FJCC B. Since getting involved in Model UN, he has been drawn to the fast-paced environment, strategic thinking, and the challenge of turning complex global issues into compelling debates. What began as a new experience quickly took his interest in international affairs and politics to a whole new level, along with an appreciation for the unpredictable situations each committee session has to offer—from being overly prepared for a topic to creating last-minute improvised speeches. Outside of the committee room, Cayden spends much of his time indulging in music as the number one Malcomm Todd fan or eating out at new restaurants. At SPAMUN, he looks forward to supporting all delegates in every way and ensuring they have a once in a lifetime experience that won't be anything less than splendid.</div>
           </div>
         </div>
       </div>
