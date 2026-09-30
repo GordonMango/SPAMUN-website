@@ -214,6 +214,19 @@ iframe {
   }
 }
 
+/* Keep navigation links within smaller desktop widths. */
+@media (min-width: 992px) and (max-width: 1199px) {
+  .site-navbar .navbar-wrap {
+    gap: 1rem;
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+  }
+
+  .site-navbar .nav-menu-links-wrap {
+    gap: 0.75rem;
+  }
+}
+
 @media (max-width: 991px) {
   .staff-grid.staff-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));

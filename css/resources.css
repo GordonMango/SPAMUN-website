@@ -1,0 +1,143 @@
+.backgrounder-link,
+.committee-matrix-link a {
+  display: inline-block;
+  padding: 0.75rem 0;
+  color: #0a4886;
+  font-weight: 600;
+  text-underline-offset: 4px;
+}
+
+.backgrounder-link:hover,
+.committee-matrix-link a:hover {
+  color: #000033;
+}
+
+.committee-matrix-link {
+  margin: 1.25rem 0 0;
+}
+
+.matrix-page .section.inner-banner {
+  padding: clamp(3rem, 7vw, 6rem) 0 2.5rem;
+}
+
+.matrix-intro {
+  max-width: 42rem;
+  margin: 1.25rem auto 0;
+  color: #526174;
+  font-size: 1.125rem;
+  line-height: 1.7;
+}
+
+.matrix-section {
+  padding: 0 0 clamp(3rem, 7vw, 6rem);
+}
+
+.matrix-section .container {
+  max-width: 90rem;
+}
+
+.matrix-toolbar,
+.matrix-next-steps {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem 2rem;
+}
+
+.matrix-toolbar p {
+  flex: 1 1 18rem;
+  margin: 0;
+  color: #526174;
+}
+
+.resource-button {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  max-width: 100%;
+  min-height: 48px;
+  padding: 0.875rem 1.5rem;
+  border: 1px solid #0a4886;
+  border-radius: 2rem;
+  background: #0a4886;
+  color: #fff;
+  font-weight: 600;
+  line-height: 1.4;
+  text-align: center;
+  text-decoration: none;
+}
+
+.resource-button:hover {
+  background: #000033;
+  border-color: #000033;
+  color: #fff;
+}
+
+.resource-button.secondary {
+  background: #fff;
+  color: #0a4886;
+}
+
+.resource-button.secondary:hover {
+  background: #f0f5fa;
+}
+
+.backgrounder-link:focus-visible,
+.committee-matrix-link a:focus-visible,
+.resource-button:focus-visible {
+  outline: 3px solid #0a4886;
+  outline-offset: 4px;
+}
+
+.matrix-frame-wrap {
+  margin-top: 1.5rem;
+  overflow: hidden;
+  border: 1px solid #dbe3ec;
+  border-radius: 1rem;
+  background: #fff;
+}
+
+.matrix-frame-wrap iframe {
+  display: block;
+  width: 100%;
+  height: 75vh;
+  min-height: 600px;
+  border: 0;
+}
+
+.matrix-next-steps {
+  margin-top: 2rem;
+  padding: clamp(1.25rem, 3vw, 2rem);
+  border-radius: 1rem;
+  background: #f0f5fa;
+}
+
+.matrix-next-steps h2 {
+  margin: 0 0 0.5rem;
+  color: #000033;
+  font-size: 1.5rem;
+  line-height: 1.3;
+}
+
+.matrix-next-steps p {
+  margin: 0;
+}
+
+.matrix-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+@media (max-width: 767px) {
+  .matrix-frame-wrap iframe {
+    min-height: 450px;
+    height: 65vh;
+  }
+
+  .matrix-toolbar .resource-button {
+    width: 100%;
+  }
+}

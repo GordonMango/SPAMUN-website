@@ -66,7 +66,7 @@
       const fallback = document.createElement('nav');
       fallback.className = 'navbar-fallback';
       fallback.setAttribute('aria-label', 'Main navigation');
-      [['index.html', 'Home'], ['committees.html', 'Committees'], ['staff.html', 'Staff'], ['registration.html', 'Registration']].forEach(function ([path, label]) {
+      [['index.html', 'Home'], ['committees.html', 'Committees'], ['matrix.html', 'Matrix'], ['registration.html', 'Registration']].forEach(function ([path, label]) {
         const link = document.createElement('a');
         link.href = new URL(path, siteRoot).href;
         link.textContent = label;
