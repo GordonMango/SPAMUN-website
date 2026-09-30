@@ -41,7 +41,7 @@
               <div class="inner-banner-title-wrap max-width-60-rem">
                 <h1 id="matrix-title" class="inner-banner-title">Country &amp; Position Matrix</h1>
               </div>
-              <p class="matrix-intro">Explore the countries and positions across our committees as you prepare for SPAMUN.</p>
+              <p class="matrix-intro">Pick a committee to see which countries and positions are still available. Availability updates as positions are assigned.</p>
             </div>
           </div>
         </div>
@@ -49,17 +49,12 @@
 
       <section class="matrix-section" aria-label="Conference matrix">
         <div class="container">
-          <div class="matrix-toolbar">
-            <p>Use the sheet tabs to browse committees. For more room, open the matrix in a new tab.</p>
-            <a href="https://docs.google.com/spreadsheets/d/e/2PACX-1vR93KDkX0gRcpfFJYxI-dFWT1s1oLJS-ewhi8C1h0kAXNtGXsfbJSJJIlYfpdssG4_f0-PiC14t0zTJ/pubhtml" target="_blank" rel="noopener noreferrer" class="resource-button">Open matrix in a new tab <span aria-hidden="true">↗</span></a>
+          <div id="matrix-app" class="matrix-app">
+            <noscript>
+              <p class="matrix-message">The matrix needs JavaScript. <a href="https://docs.google.com/spreadsheets/d/e/2PACX-1vR93KDkX0gRcpfFJYxI-dFWT1s1oLJS-ewhi8C1h0kAXNtGXsfbJSJJIlYfpdssG4_f0-PiC14t0zTJ/pubhtml" target="_blank" rel="noopener noreferrer">View it in Google Sheets</a>.</p>
+            </noscript>
           </div>
-          <div class="matrix-frame-wrap">
-            <iframe
-              title="SPAMUN 2026 country and position matrix"
-              src="https://docs.google.com/spreadsheets/d/e/2PACX-1vR93KDkX0gRcpfFJYxI-dFWT1s1oLJS-ewhi8C1h0kAXNtGXsfbJSJJIlYfpdssG4_f0-PiC14t0zTJ/pubhtml"
-              sandbox="allow-same-origin allow-scripts allow-popups allow-presentation"
-            ></iframe>
-          </div>
+          <script src="js/matrix.js"></script>
           <div class="matrix-next-steps">
             <div>
               <h2>Prepare for your committee</h2>
